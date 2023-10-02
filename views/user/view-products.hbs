@@ -1,0 +1,43 @@
+<section>
+    <div class="container mt-5">
+        <div class="row">
+            {{#each products}}
+            <div class="col-md-3 p-3">
+                <div class="card" style="
+                width: 15rem; 
+                height:25rem;
+                border-radius:10px;
+                background:#ffffff22;
+                color:aliceblue;">
+                    <img class="card-img-top" style="
+                    height:15rem;
+                    " src="/product-images/{{this._id}}.jpg " || "images/download.jpeg" alt="Sheep"
+                        onclick="document.location='/views/{{this._id}}'">
+
+
+
+
+                    <div class="card-body" onclick="document.location='/views/{{this._id}}'">
+                        <h5 class="card-title">{{this.Name}}&nbsp; &nbsp;&nbsp; ₹{{this.Price}}</h5>
+                        <p class="card-text">{{this.Description}}</p>
+                  
+                    </div>
+                    <div class="card-bodie">
+
+                        <button class="btn btn-primary" onclick="addToCart('{{this._id}}')">Add cart</button>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+</section>
+
+<style>
+    body {
+        background: #000;
+    }
+</style>
+
+<script src="javascripts\script.js"></script>

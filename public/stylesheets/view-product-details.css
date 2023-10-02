@@ -1,0 +1,206 @@
+.slider-container {
+
+    position: relative;
+    padding-top: 50px;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    float: left;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+
+    min-width: 100%;
+}
+
+.dots-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.slider-dot {
+    background-color: #ff9900;
+}
+
+
+img {
+    width: 130px;
+    height: 500px;
+
+}
+
+/* main content  */
+
+.main-content {
+    width: 40%;
+    float: left;
+    position: relative;
+    /* padding: 10px; */
+    margin: 10px;
+    left: 0;
+
+}
+
+.main-content .product-name{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000;
+}
+.main-content .product-name h3{
+    font-weight: 600;
+}
+.main-content .price-box{
+    margin: 20px;
+    font-size: 150%;
+    font-weight: 800;
+}
+
+.payment-box{
+    margin: 10px;
+    float: right;
+    width: 20%;
+    height: 34rem;
+    background: #f9f9f9;
+    border: 1px solid #2e2e2e7a;
+    border-radius: 3%;
+}
+
+.payment-box .imgs img{
+    margin: 10px;
+    width: 94%;
+    height: 20rem;
+    border-radius: 4%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+
+/* Updated CSS for quantity section */
+.payment-box .quantity {
+    background:#bbbbbb44 ;
+    color: #fff; 
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+    padding: 10px; 
+    border-radius: 15px;
+    font-size: 18px; 
+    margin: 10px;
+    height: 30px;
+    width: 94%;
+    
+}
+.payment-box .quantity p{
+    position: relative;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #000;
+    font-weight: 600;
+}
+
+.payment-box .quantity button {
+    background: #555; 
+    color: #fff; 
+    border: none;
+    width: 5rem; 
+    height: 30px;
+    font-size: 20px; 
+    cursor: pointer;
+    transition: background-color 0.3s; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.payment-box .quantity .less-than{
+    border-top-left-radius: 15px; 
+    border-bottom-left-radius:15px ;
+    float: left;
+    position: relative;
+    left: -8%;
+}
+
+.payment-box .quantity .great-than{
+    border-top-right-radius: 15px; 
+    border-bottom-right-radius:15px ;
+    float: left;
+    position: relative;
+    right: -8%;
+}
+
+.payment-box .quantity button:disabled {
+    background: #999;
+    cursor: not-allowed; 
+}
+
+.payment-box .quantity button:hover {
+    background: #777; 
+}
+
+
+.payment-box .price{
+    padding: 5%;
+    padding-bottom: 0;
+    font-weight: 700;
+    font-size: 130%;
+}
+
+.payment-box .add-cart button{
+    width: 94%;
+    height: 30px;
+    list-style: none;
+    border: none;
+    border-radius: 15px;
+    margin: 10px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+   transition: 1s;
+    background:#bbbbbb44 ;
+}
+
+.payment-box .add-cart button:hover{
+
+   
+    background:#6a6a6a44 ;
+    transition: .5s;
+}
+.payment-box .buy-now button{
+
+   
+    background:#ffe9b0d6 ;
+    transition: .5s;
+}
+
+.payment-box .buy-now button:hover{
+
+   
+    background:#bca97b ;
+    transition: .5s;
+}
+
+h1{
+    color: red;
+}

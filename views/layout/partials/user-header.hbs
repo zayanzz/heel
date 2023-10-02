@@ -1,0 +1,77 @@
+<style>
+                       
+
+                        .badge {
+                           
+                            border-radius: 99999px ;
+                            color: #fff;
+                        }
+
+                        .badge.badge-default {
+                            background-color: #2a2c2d7f
+                        }
+                    </style>
+
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">cart </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/cart">Cart
+  <div class="badge badge-default" id="cart-count">{{cartCount}}</div>
+</a>
+                    
+                </li>
+                {{#if user}}
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Orders</a>
+                </li>
+                {{/if}}
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">foods</a>
+                        <a class="dropdown-item" href="#">devices</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">All</a>
+                    </div>
+                </li>
+
+            </ul>
+            <div class="dropdown w-12">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{#if user}}
+                    {{user.Username}}
+
+                    {{else}}
+                    Account
+                    {{/if}}
+                </button>
+                <div class="dropdown-menu w-10px" aria-labelledby="dropdownMenuButton" style="width: 10px;">
+                    {{#if user}}
+                    <a class="dropdown-item" href="/logout">Logout</a>
+                    {{else}}
+                    <a class="dropdown-item" href="/auth/login">Login</a>
+                    {{/if}}
+
+
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

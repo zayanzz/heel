@@ -1,0 +1,67 @@
+<section>
+	<div class="container">
+		<div class="row mt-4">
+			<style>
+				.btn {
+					border-radius: 10px;
+					width: 70px;
+					align-items: center;
+					text-align: center;
+				}
+			</style>
+			<a href="/admin/add-product" class="btn btn-success ml-auto">Add</a>
+
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<table class="table table-image mt-5" id="productsTable">
+						<thead>
+							<tr>
+								<th scope="col">Title</th>
+								<th scope="col">Category</th>
+								<th scope="col">Description</th>
+								<th>Image</th>
+								<th>Option</th>
+
+
+							</tr>
+						</thead>
+						<tbody>
+							{{#each products}}
+							<tr>
+
+
+								<td>{{this.Name}}</td>
+								<td>{{this.Category}}</td>
+								{{!-- <td>{{this.Price}}</td> --}}
+								<td>{{this.Description}}</td>
+								<td class="w-25 h-10">
+									<img width="60px" height="60px" src="/product-images/{{this._id}}.jpg"
+										class="img-fluid img-thumbnail" alt="Sheep">
+								</td>
+
+								<td><a href="/admin/edit-product/{{this._id}}" class="btn btn-primary ml-auto">Edit</a>
+									<a href="/admin/delete-product/{{this._id}}" class="btn btn-danger ml-auto"
+										onclick="return confirm('are sure ? {{this.Name}}')">Delete</a>
+
+								</td>
+
+							</tr>
+							{{/each}}
+						</tbody>
+					</table>
+
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	$(function () {
+		$('#productsTable').DataTable();
+	});
+</script>

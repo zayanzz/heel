@@ -1,0 +1,401 @@
+{{!-- <style>
+    html {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: #000;
+    }
+
+    .login-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        padding: 40px;
+        transform: translate(-50%, -50%);
+        background: #24171704;
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+        border-radius: 10px;
+    }
+
+    .login-box h2 {
+        margin: 0 0 30px;
+        padding: 0;
+        color: #00ff99;
+        text-align: center;
+    }
+
+    .login-box .user-box {
+        position: relative;
+    }
+
+    .login-box .user-box input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #00fdc2;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #131212;
+        outline: none;
+        background: transparent;
+    }
+
+    .login-box .user-box label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 0;
+        font-size: 20px;
+        color: #0a0a0a;
+        pointer-events: none;
+        transition: .5s;
+    }
+
+    .login-box .user-box input:focus~label,
+    .login-box .user-box input:valid~label {
+        top: -20px;
+        left: 0;
+        color: #f11414;
+        font-size: 16px;
+    }
+
+    .login-box form input.submit {
+        position: relative;
+        display: inline-block;
+        padding: 10px 20px;
+        color: #0a0a0a;
+        font-size: 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: .5s;
+        margin-top: 40px;
+        letter-spacing: 4px
+    }
+
+    .login-box input[type=submit]:hover {
+        background: #c4160a;
+        color: #0e0d0d;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #f42703,
+            0 0 25px #f42703,
+            0 0 50px #f42703,
+            0 0 100px #f42703;
+    }
+
+    .login-box .submit span {
+        position: absolute;
+        display: block;
+    }
+
+    .login-box .submit span:nth-child(1) {
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #f42703);
+        animation: btn-anim1 1s linear infinite;
+    }
+
+    @keyframes btn-anim1 {
+        0% {
+            left: -100%;
+        }
+
+        50%,
+        100% {
+            left: 100%;
+        }
+    }
+
+    .login-box .submit span:nth-child(2) {
+        top: -100%;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg, transparent, #f42703);
+        animation: btn-anim2 1s linear infinite;
+        animation-delay: .25s
+    }
+
+    @keyframes btn-anim2 {
+        0% {
+            top: -100%;
+        }
+
+        50%,
+        100% {
+            top: 100%;
+        }
+    }
+
+    .login-box .submit span:nth-child(3) {
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(270deg, transparent, #f42703);
+        animation: btn-anim3 1s linear infinite;
+        animation-delay: .5s
+    }
+
+    @keyframes btn-anim3 {
+        0% {
+            right: -100%;
+        }
+
+        50%,
+        100% {
+            right: 100%;
+        }
+    }
+
+    .login-box .submit span:nth-child(4) {
+        bottom: -100%;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(360deg, transparent, #f42703);
+        animation: btn-anim4 1s linear infinite;
+        animation-delay: .75s
+    }
+
+    @keyframes btn-anim4 {
+        0% {
+            bottom: -100%;
+        }
+
+        50%,
+        100% {
+            bottom: 100%;
+        }
+    }
+</style> --}}
+
+
+<style>
+    html {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: #e72c2c;
+    }
+
+    .login-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        padding: 40px;
+        transform: translate(-50%, -50%);
+        background: #24171704;
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+        border-radius: 10px;
+    }
+
+    .login-box h2 {
+        margin: 0 0 30px;
+        padding: 0;
+        color: #00ff99;
+        text-align: center;
+    }
+
+    .login-box .user-box {
+        position: relative;
+    }
+
+    .login-box .user-box input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #00fdc2;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #131212;
+        outline: none;
+        background: transparent;
+    }
+
+    .login-box .user-box label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 0;
+        font-size: 20px;
+        color: #0a0a0a;
+        pointer-events: none;
+        transition: .5s;
+    }
+
+    .login-box .user-box input:focus~label,
+    .login-box .user-box input:valid~label {
+        top: -20px;
+        left: 0;
+        color: #f11414;
+        font-size: 16px;
+    }
+
+    .login-box form input.submit {
+        position: relative;
+        display: inline-block;
+        padding: 10px 20px;
+        color: #0a0a0a;
+        font-size: 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: .5s;
+        margin-top: 40px;
+        letter-spacing: 4px
+    }
+
+    .login-box input[type=submit]:hover {
+        background: #c4160a;
+        color: #0e0d0d;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #f42703,
+            0 0 25px #f42703,
+            0 0 50px #f42703,
+            0 0 100px #f42703;
+    }
+
+    .login-box .submit span {
+        position: absolute;
+        display: block;
+    }
+
+    .login-box .submit span:nth-child(1) {
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #f42703);
+        animation: btn-anim1 1s linear infinite;
+    }
+
+    @keyframes btn-anim1 {
+        0% {
+            left: -100%;
+        }
+
+        50%,
+        100% {
+            left: 100%;
+        }
+    }
+
+    .login-box .submit span:nth-child(2) {
+        top: -100%;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg, transparent, #f42703);
+        animation: btn-anim2 1s linear infinite;
+        animation-delay: .25s
+    }
+
+    @keyframes btn-anim2 {
+        0% {
+            top: -100%;
+        }
+
+        50%,
+        100% {
+            top: 100%;
+        }
+    }
+
+    .login-box .submit span:nth-child(3) {
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(270deg, transparent, #f42703);
+        animation: btn-anim3 1s linear infinite;
+        animation-delay: .5s
+    }
+
+    @keyframes btn-anim3 {
+        0% {
+            right: -100%;
+        }
+
+        50%,
+        100% {
+            right: 100%;
+        }
+    }
+
+    .login-box .submit span:nth-child(4) {
+        bottom: -100%;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(360deg, transparent, #f42703);
+        animation: btn-anim4 1s linear infinite;
+        animation-delay: .75s
+    }
+
+    @keyframes btn-anim4 {
+        0% {
+            bottom: -100%;
+        }
+
+        50%,
+        100% {
+            bottom: 100%;
+        }
+    }
+</style>
+
+
+<div class="login-box">
+    <h2>sign up</h2>
+    <form action="signup" method="post">
+
+        <div class="user-box">
+            <input type="text" class="form-control" name="Username" id="first_name" placeholder="User Name">
+            <label>Username</label>
+        </div>
+
+        <div class="user-box">
+            <input type="text" class="form-control" name="User_Id" id="first_name" placeholder="User Id">
+            <label>User Id</label>
+        </div>
+
+        <div class="user-box">
+            <input type="email" class="form-control" name="Email" id="first_name" placeholder="Email
+            ">
+            <label>Email</label>
+        </div>
+
+
+        <div class="user-box">
+            <input type="password" class="form-control" name="Password" id="pw" placeholder="Password">
+            <label>Password</label>
+        </div>
+        <div class="submit">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <input type="submit" value="sign up" class="submit">
+        </div>
+        <br>
+        <br>
+        <div class="login-page" style="color: #797777;">
+            you have an account? <a href="login" style="text-decoration: none;"> Login</a>
+        </div>
+    </form>
+</div>

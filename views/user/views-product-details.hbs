@@ -1,0 +1,67 @@
+
+
+<link rel="stylesheet" href="stylesheets/view-product-details.css">
+
+<div class="slider-container">
+    <div class="slider">
+       
+
+        <img src="/product-images/{{this.product}}.jpg" alt="Product Image 1" class="slide">
+<img src="./download.jpeg" alt="" srcset="">
+
+    </div>
+    <div class="dots-container"></div>
+
+ 
+
+
+</div>
+
+<div class="main-content">
+    <div class="product-name">
+        <h3>Amazon Basics Kids/Youth Gaming Recliner with Headrest and Back Pillow, 3+ Age Group, Black/White </h3>
+    </div>
+   
+    <div class="price-box">
+        <p>₹{{this.Price}}</p>
+    </div>
+
+   
+</div>
+
+<div class="payment-box">
+    <div class="imgs">
+        <img src="product-images\65044ba9c5b08143cb8766db.jpg" alt="" srcset="">
+    </div>
+
+   <div class="price">
+    <p id="price">$</p>
+</div>
+
+    <div class="quantity">
+        <button id="lessThanButton" onclick="decrementNumber()" class="less-than" disabled >-</button>
+        <p>Quantity: <span id="number">1</span></p>
+        <button id="greatThanButton" onclick="incrementNumber()" class="great-than">+</button>
+
+    </div>
+
+
+
+    <div class="add-cart">
+        <button class="add-to-cart">Add To Cart</button>
+    </div>
+    <div class="add-cart buy-now">
+        <button class="add-to-cart buy-now-button" onclick="document.location='place-order-one'">Buy Now</button>
+    </div>
+</div>
+
+
+
+
+<script src="javascripts/view-product-details.js">
+
+
+</script>
+
+
+
